@@ -62,7 +62,7 @@ test_loader = torch.utils.data.DataLoader(
 *   网格生成器 (The grid generator) 在输入图像中生成对应于来自输出图像的每个像 素的坐标网格.
 *   采样器 (The sampler) 将转换的参数应用于输入图像.
 
-![http://pytorch.apachecn.org/cn/tutorials/_images/stn-arch.png](img/3864cede91518c948be774422c076cc0.jpg)
+![http://pytorch.apachecn.org/cn/tutorials/_images/stn-arch.png](../img/3864cede91518c948be774422c076cc0.jpg)
 
 注解：
 
