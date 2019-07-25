@@ -4,7 +4,7 @@
 
 **原作者**: [Ghassen HAMROUNI](https://github.com/GHamrouni)
 
-![http://pytorch.apachecn.org/cn/tutorials/_images/FSeq.png](img/01cb117c4c0d3fcaa29ac2f3c359529a.jpg)
+![http://pytorch.apachecn.org/cn/tutorials/_images/FSeq.png](../img/01cb117c4c0d3fcaa29ac2f3c359529a.jpg)
 
 在这篇教程中, 你会学到如何用名为空间转换网络 (spatial transformer networks) 的视觉注意力结构来加强你的网络. 你可以从这篇论文上看到更多关于空间转换网络 (spatial transformer networks)的知识: [DeepMind paper](https://arxiv.org/abs/1506.02025)
 
@@ -68,7 +68,7 @@ test_loader = torch.utils.data.DataLoader(
 
 我们需要包含 affine_grid 和 grid_sample 模块的 PyTorch 最新版本.
 
-```py
+```python
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
