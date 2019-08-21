@@ -1269,6 +1269,7 @@ class torch.nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride=1,
     
     &gt; *   当 groups= `in_channels`, 每个输入通道都会被单独的一组卷积层处理，这个组的大小是![](img/648a514da1dace3deacf3f078287e157.jpg)。
     
+
 `kernel_size`, `stride`, `padding`, `output_padding` 这几个参数均支持一下输入形式：
 
 > *   一个 `int` 数字 – 二维维数据的高和宽这两个维度都会采用这一个数字。
@@ -1366,6 +1367,7 @@ class torch.nn.ConvTranspose3d(in_channels, out_channels, kernel_size, stride=1,
     
     &gt; *   当 groups= `in_channels`, 每个输入通道都会被单独的一组卷积层处理，这个组的大小是![](img/648a514da1dace3deacf3f078287e157.jpg)。
     
+
 `kernel_size`, `stride`, `padding`, `output_padding` 这几个参数均支持一下输入形式：
 
 > *   一个 `int` 数字 – 三维维数据的深度，高和宽这两个维度都会采用这一个数字。
@@ -1435,7 +1437,6 @@ class torch.nn.Unfold(kernel_size, dilation=1, padding=0, stride=1)
 将一个batch的输入张量展开成由多个滑动局部块组成的形式。（im2col的扩展模块，起到基本类似im2col的作用）
 
 以一个大小为![](img/2468b226c29a7e754a9c20f0214fa85f.jpg)的批次化(batched)输入张量为例，其中![](img/9341d9048ac485106d2b2ee8de14876f.jpg)是batch的大小，![](img/6c8feca3b2da3d6cf371417edff4be4f.jpg)是通道数量，![](img/28ec51e742166ea3400be6e7343bbfa5.jpg)代表了任意空间维度。那Unfold这个操作在此张量上的操作就是，将这个张量展开成由多个`kernel_size`大小的滑动块组成的大小为![](img/4e1cad10fa9480fa82adbe59a5ae81fa.jpg)的三维张量，其中![](img/a8846766f2e1b47021f1520993773ccb.jpg)是每个块中数的个数（每个块有![](img/8c7a54ca7193bc3a6c5ace8c3b07d24c.jpg)个空间位置，每个空间位置存储一个通道大小为![](img/6c8feca3b2da3d6cf371417edff4be4f.jpg)的向量），![](img/db4a9fef02111450bf98261889de550c.jpg)是块的个数：
-
 
 ![](img/1d2c6a9103e2b33f725602aebf90364e.jpg)
 （这张图有问题啊，编辑整理的时候注意修正一下）
@@ -2958,8 +2959,6 @@ Parameters:
 *   **num_parameters** ([_int_](https://docs.python.org/3/library/functions.html#int "(in Python v3.7)")) – 要进行训练学习的 ![](img/070b1af5eca3a5c5d72884b536090f17.jpg) 参数的数量。尽管此函数的输入是一个整形，但此函数要求输入的整形只能为两个值，1或者输入张量的通道数。默认：1 
 *   **init** ([_float_](https://docs.python.org/3/library/functions.html#float "(in Python v3.7)")) – ![](img/070b1af5eca3a5c5d72884b536090f17.jpg)的初始值，默认: 0.25
 
-
-
 ```py
 Shape:
 ```
@@ -2968,7 +2967,13 @@ Shape:
 *   输出: ![](img/eb7a3f5bc15cc379e78f768e821eb094.jpg), 与输入向量保持一样的形状大小
 
 | Variables: | **weight** ([_Tensor_](tensors.html#torch.Tensor "torch.Tensor")) – 大小为`num_parameters`的可学习参数。The attr:`dtype` is default to（这句话有点问题， to后面漏掉了） |
-| --- | --- |
+| ---------- | ------------------------------------------------------------ |
+|            |                                                              |
+| ---  | ---  |
+| ---- | ---- |
+|      |      |
+
+
 
 ![https://pytorch.org/docs/stable/_images//PReLU.png](img/59baba7257ac05b747455a25a3457baf.jpg)
 
@@ -2992,8 +2997,10 @@ Applies the rectified linear unit function element-wise
 
 ![https://pytorch.org/docs/stable/_images//ReLU.png](img/6bfe295d2f51e4e33648ffb4273723a6.jpg)
 
+
 | Parameters: | **inplace** – 是否进行原位操作。 默认： `False` |
 | --- | --- |
+
 
 ```py
 Shape:
@@ -4834,16 +4841,16 @@ Parameters:
 Inputs: `input` (LongTensor) and `offsets` (LongTensor, optional)
 
 > *   If `input` is 2D of shape `B x N`,
+>    
 >     
->     
->     
+>    
 >     it will be treated as `B` bags (sequences) each of fixed length `N`, and this will return `B` values aggregated in a way depending on the `mode`. `offsets` is ignored and required to be `None` in this case.
->     
->     
+>    
+>    
 > *   If `input` is 1D of shape `N`,
+>    
 >     
->     
->     
+>    
 >     it will be treated as a concatenation of multiple bags (sequences). `offsets` is required to be a 1D tensor containing the starting index positions of each bag in `input`. Therefore, for `offsets` of shape `B`, `input` will be viewed as having `B` bags. Empty bags (i.e., having 0-length) will have returned vectors filled by zeros.
 
 Output shape: `B x embedding_dim`
