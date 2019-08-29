@@ -17,8 +17,9 @@ class torch.utils.data.TensorDataset(*tensors)
 
 张量可以沿第一个维度划分为样例之后进行检索。
 
-| 参数： | ***tensors** ([_Tensor_](tensors.html#torch.Tensor "torch.Tensor")) – 第一个维度相同的张量。 |
-| --- | --- |
+| 参数： | ***tensors** ([_Tensor_](tensors.html#torch.Tensor "torch.Tensor")) – 第一个维度相同的张量。 |  |
+| ------ | ------------------------------------------------------------ | ------ |
+|        |                                                              |  |
 
 ```py
 class torch.utils.data.ConcatDataset(datasets)
@@ -27,7 +28,8 @@ class torch.utils.data.ConcatDataset(datasets)
 用于融合不同数据集的Dataset类。目的：组合不同的现有数据集，鉴于融合操作是同时执行的，数据集规模可以很大。
 
 | 参数： | **datasets**（_序列_）– 要融合的数据集列表。 |
-| --- | --- |
+| ------ | -------------------------------------------- |
+|        |                                              |
 
 ```py
 class torch.utils.data.Subset(dataset, indices)
@@ -94,7 +96,10 @@ class torch.utils.data.SequentialSampler(data_source)
 以相同的顺序依次采样。
 
 | 参数： | **data_source** ([_Dataset_](#torch.utils.data.Dataset "torch.utils.data.Dataset")) – 要从中采样的数据集。 |
-| --- | --- |
+| ------ | ------------------------------------------------------------ |
+|        |                                                              |
+
+
 
 ```py
 class torch.utils.data.RandomSampler(data_source, replacement=False, num_samples=None)
@@ -115,7 +120,10 @@ class torch.utils.data.SubsetRandomSampler(indices)
 从给定的索引列表中采样，不替换。
 
 | 参数： | **indices**（_序列_）– 索引序列 |
-| --- | --- |
+| ------ | ------------------------------- |
+|        |                                 |
+
+
 
 ```py
 class torch.utils.data.WeightedRandomSampler(weights, num_samples, replacement=True)

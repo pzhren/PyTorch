@@ -91,7 +91,9 @@ torch.numel(input) → int
 返回 `input` 张量中元素总数.
 
 | Parameters: | **input** ([_Tensor_](tensors.html#torch.Tensor "torch.Tensor")) – the input tensor |
-| --- | --- |
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
+
 
 Example:
 
@@ -130,7 +132,8 @@ CPU不支持非规格化浮点数 .
 如果你的系统支持非规格化数字模式(flush denormal mode)并且可成功配置该模式则返回 `True` . [`set_flush_denormal()`](#torch.set_flush_denormal "torch.set_flush_denormal") 可以使用在支持SSE3的x86架构.
 
 | Parameters: | **mode** ([_bool_](https://docs.python.org/3/library/functions.html#bool "(in Python v3.7)")) – 是否开启  flush denormal mode |
-| --- | --- |
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 
 Example:
 

@@ -70,10 +70,26 @@ class torch.autograd.Variable
 参数: 
 
 * `data`: 包裹任何类型的张量. 
+
 * `grad`: 变量保持类型和位置匹配的变量 `.data`. 这个属性是懒惰的分配,不能被重新分配. 
+
 * `requires_grad`: 指示变量是否已被使用的布尔值由包含任何变量的子图创建,需要它. 有关更多详细信息,请参阅 excluded-subgraphs.只能在叶变量上进行更改. 
-* `volatile`: 布尔值表示应该使用变量推理模式,即不保存历史. 查看 [反向排除 subgraphs (子图)](notes/autograd.html#excluding-subgraphs) 更多细节. 只能在叶变量上进行更改. 
+
+* `volatile`: 布尔值表示应该使用变量推理模式,即不保存历史. 查看 [反向排除 subgraphs (子图)](notes/autograd.html#excluding-subgraphs) 更多细节. 只能在叶变量上进行更改. **最新的版的已经将该属性去掉**，
+
+  - ```python
+    inputs = Variable(inputs.cuda(), volatile=True)
+    ```
+
+    改成下面即可：
+
+  - ```python
+    with torch.no_grad():    
+        inputs = Variable(inputs.cuda())
+    ```
+
 * `is_leaf`: 指示是否为叶子节点,即是否由用户创建的节点. 
+
 * `grad_fn`: 导数函数跟踪.
 
 参数: 

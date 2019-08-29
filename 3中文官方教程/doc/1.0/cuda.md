@@ -35,7 +35,8 @@ class torch.cuda.device(device)
 Context-manager 用来改变选择的设备。
 
 | 参数: | **device** ([_torch.device_](tensor_attributes.html#torch.torch.device "torch.torch.device") _或者_ [_int_](https://docs.python.org/3/library/functions.html#int "(in Python v3.7)")) – 要选择的设备索引。如果这个参数是负数或者是 `None`，那么它不会起任何作用。 |
-| --- | --- |
+| ----- | ------------------------------------------------------------ |
+|       |                                                              |
 
 ```py
 torch.cuda.device_count()
@@ -491,8 +492,8 @@ torch.cuda.memory_allocated(device=None)
 返回给定设备的当前GPU显存使用量（以字节为单位）。
 
 | 参数: | **device** ([_torch.device_](tensor_attributes.html#torch.torch.device "torch.torch.device") _或者_ [_int_](https://docs.python.org/3/library/functions.html#int "(in Python v3.7)")_,_ _可选的_) – 选定的设备。如果 [`device`](#torch.cuda.device "torch.cuda.device") 是`None`（默认的），将返回 [`current_device()`](#torch.cuda.current_device "torch.cuda.current_device")返回的当前设备的数据。 |
-| --- | --- |
-
+| ----- | ------------------------------------------------------------ |
+|       |                                                              |
 注意
 
 这可能比 `nvidia-smi` 显示的数量少，因为一些没有使用的显存会被缓存分配器持有，且一些上下文需要在GPU中创建。查看 [显存管理](notes/cuda.html#cuda-memory-management) 部分了解更多关于GPU显存管理部分的详细信息。
@@ -503,8 +504,9 @@ torch.cuda.max_memory_allocated(device=None)
 
 返回给定设备的张量的最大GPU显存使用量（以字节为单位）。
 
-| 参数: | **device** ([_torch.device_](tensor_attributes.html#torch.torch.device "torch.torch.device") _或者_ [_int_](https://docs.python.org/3/library/functions.html#int "(in Python v3.7)")_,_ _可选的_) –  选择的设备。如果 [`device`](#torch.cuda.device "torch.cuda.device") 是`None`（默认的），将返回 [`current_device()`](#torch.cuda.current_device "torch.cuda.current_device")返回的当前设备的数据。  |
-| --- | --- |
+| 参数: | **device** ([_torch.device_](tensor_attributes.html#torch.torch.device "torch.torch.device") _或者_ [_int_](https://docs.python.org/3/library/functions.html#int "(in Python v3.7)")_,_ _可选的_) –  选择的设备。如果 [`device`](#torch.cuda.device "torch.cuda.device") 是`None`（默认的），将返回 [`current_device()`](#torch.cuda.current_device "torch.cuda.current_device")返回的当前设备的数据。 |
+| ----- | ------------------------------------------------------------ |
+|       |                                                              |
 
 注意
 
@@ -529,8 +531,9 @@ torch.cuda.max_memory_cached(device=None)
 
 返回给定设备的缓存分配器管理的最大GPU显存（以字节为单位）。
 
-| 参数: | **device** ([_torch.device_](tensor_attributes.html#torch.torch.device "torch.torch.device") _或者_ [_int_](https://docs.python.org/3/library/functions.html#int "(in Python v3.7)")_,_ _可选的_) – 选择的设备。如果 [`device`](#torch.cuda.device "torch.cuda.device") 是`None`（默认的），将返回 [`current_device()`](#torch.cuda.current_device "torch.cuda.current_device")返回的当前设备的数据。|
-| --- | --- |
+| 参数: | **device** ([_torch.device_](tensor_attributes.html#torch.torch.device "torch.torch.device") _或者_ [_int_](https://docs.python.org/3/library/functions.html#int "(in Python v3.7)")_,_ _可选的_) – 选择的设备。如果 [`device`](#torch.cuda.device "torch.cuda.device") 是`None`（默认的），将返回 [`current_device()`](#torch.cuda.current_device "torch.cuda.current_device")返回的当前设备的数据。 |
+| ----- | ------------------------------------------------------------ |
+|       |                                                              |
 
 注意
 
@@ -545,7 +548,8 @@ torch.cuda.nvtx.mark(msg)
 描述某个时刻发生的瞬时事件。
 
 | 参数: | **msg** (_string_) – 与时间相关的ASCII信息。 |
-| --- | --- |
+| ----- | -------------------------------------------- |
+|       |                                              |
 
 ```py
 torch.cuda.nvtx.range_push(msg)
@@ -554,7 +558,8 @@ torch.cuda.nvtx.range_push(msg)
 将范围推到嵌套范围跨度的堆栈上。 返回启动范围的从零开始的深度。
 
 | 参数: | **msg** (_string_) – 与时间相关的ASCII信息。 |
-| --- | --- |
+| ----- | -------------------------------------------- |
+|       |                                              |
 
 ```py
 torch.cuda.nvtx.range_pop()

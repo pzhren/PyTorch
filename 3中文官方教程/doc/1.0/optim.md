@@ -23,7 +23,6 @@
 ```
 optimizer = optim.SGD(model.parameters(), lr = 0.01, momentum=0.9)
 optimizer = optim.Adam([var1, var2], lr = 0.0001)
-
 ```
 
 ### 每个参数选项
@@ -121,8 +120,8 @@ load_state_dict(state_dict)
 加载优化器状态。
 
 | 参数： | **state_dict** （） - 优化器状态。应该是从调用返回的对象。 |
-| --- | --- |
-
+| ------ | ---------------------------------------------------------- |
+|        |                                                            |
 ```
 state_dict()
 ```
@@ -146,8 +145,8 @@ step(closure)
 执行单个优化步骤（参数更新）。
 
 | Parameters: | **闭包**（_可调用_） - 一个重新评估模型并返回损失的闭包。大多数优化器都是可选的。 |
-| --- | --- |
-
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 ```
 zero_grad()
 ```
@@ -177,8 +176,8 @@ step(closure=None)
 执行单个优化步骤。
 
 | Parameters: | **关闭**（_可调用_ _，_ _可选_） - 一个重新评估模型并返回损失的闭包。 |
-| --- | --- |
-
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 ```
 class torch.optim.Adagrad(params, lr=0.01, lr_decay=0, weight_decay=0, initial_accumulator_value=0)
 ```
@@ -201,8 +200,8 @@ step(closure=None)
 Performs a single optimization step.
 
 | Parameters: | **closure** (_callable__,_ _optional_) – A closure that reevaluates the model and returns the loss. |
-| --- | --- |
-
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 ```
 class torch.optim.Adam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0, amsgrad=False)
 ```
@@ -227,8 +226,8 @@ step(closure=None)
 Performs a single optimization step.
 
 | Parameters: | **closure** (_callable__,_ _optional_) – A closure that reevaluates the model and returns the loss. |
-| --- | --- |
-
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 ```
 class torch.optim.SparseAdam(params, lr=0.001, betas=(0.9, 0.999), eps=1e-08)
 ```
@@ -251,8 +250,8 @@ step(closure=None)
 Performs a single optimization step.
 
 | Parameters: | **closure** (_callable__,_ _optional_) – A closure that reevaluates the model and returns the loss. |
-| --- | --- |
-
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 ```
 class torch.optim.Adamax(params, lr=0.002, betas=(0.9, 0.999), eps=1e-08, weight_decay=0)
 ```
@@ -276,8 +275,8 @@ step(closure=None)
 Performs a single optimization step.
 
 | Parameters: | **closure** (_callable__,_ _optional_) – A closure that reevaluates the model and returns the loss. |
-| --- | --- |
-
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 ```
 class torch.optim.ASGD(params, lr=0.01, lambd=0.0001, alpha=0.75, t0=1000000.0, weight_decay=0)
 ```
@@ -302,8 +301,8 @@ step(closure=None)
 Performs a single optimization step.
 
 | Parameters: | **closure** (_callable__,_ _optional_) – A closure that reevaluates the model and returns the loss. |
-| --- | --- |
-
+| ----------- | ------------------------------------------------------------ |
+|             |                                                              |
 ```
 class torch.optim.LBFGS(params, lr=1, max_iter=20, max_eval=None, tolerance_grad=1e-05, tolerance_change=1e-09, history_size=100, line_search_fn=None)
 ```
